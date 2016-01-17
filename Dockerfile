@@ -4,7 +4,7 @@ MAINTAINER Sol&TIC <serveur@soletic.org>
 # Update ubuntu and install command line tools for container installation
 RUN apt-get update && apt-get -y install wget
 
-# Add question2answer configuration file in installation /tmp directory
+# wget question2answer, unzip and create configuration file in /tmp directory
 RUN cd /tmp && wget https://github.com/q2a/question2answer/archive/master.zip && \
 	unzip master.zip && cp qa-config-exemple.php qa-config.php
 
