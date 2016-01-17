@@ -19,6 +19,3 @@ DocumentRoot /var/www/q2a
 
 ErrorLog /var/www/logs/vhost-%HOST_DOMAIN_NAME%-error.log
 CustomLog /var/www/logs/vhost-%HOST_DOMAIN_NAME%-access.log combined
-
-# Set HTTPS environment variable if we came in over secure channel
-SetEnvIf x-forwarded-proto https HTTPS=on
