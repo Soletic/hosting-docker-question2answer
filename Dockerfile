@@ -6,7 +6,7 @@ RUN apt-get update && apt-get -y install wget
 
 # wget question2answer, unzip and create configuration file in /tmp directory
 RUN cd /tmp && wget https://github.com/q2a/question2answer/archive/master.zip && \
-	unzip master.zip && cp qa-config-exemple.php qa-config.php
+	unzip master.zip && mv question2answer-master q2a && cp q2a/qa-config-exemple.php q2a/qa-config.php
 
 # Add installation script of container
 ADD start-q2a.sh /root/scripts/start-q2a.sh
